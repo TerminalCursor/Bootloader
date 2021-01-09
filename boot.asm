@@ -16,12 +16,12 @@ entry:  jmp 0x0000:.flushCS
     cld
 
     ;; Set text mode
-    sti
-    mov ah, 0x00
-    mov al, 0x13
-    int 0x10
-    cli
-    mov [VIDEO_MODE], ax
+    ;;sti
+    ;;mov ah, 0x00
+    ;;mov al, 0x13
+    ;;int 0x10
+    ;;cli
+    ;;mov [VIDEO_MODE], ax
 
     ;; call clear_screen    ; Clear the screen
 

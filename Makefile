@@ -5,12 +5,13 @@
 .PHONY: clean cleanobj run
 
 # First rule is run by default
-#LogOS.aligned.bin: LogOS.bin
-#	dd if=$< of=$@ bs=100M conv=sync
 #
 
 OS.bin: boot.bin toy.bin
 	cat $^ > $@
+
+# LBOOT.bin: boot.bin
+# 	dd if=$< of=$@ bs=100m conv=sync
 
 %.o: %.asm
 	nasm $< -f elf -o $@
